@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>認識台灣天氣</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: #edf3f7;
+    color: #26394a;
+}
+
+.presentation {
+    width: 90%;
+    max-width: 900px;
+    min-height: 520px;
+    margin: 40px auto 15px;
+    padding: 50px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+h1, h2, h3 {
+    color: #102b46;
+}
+
+h1 {
+    font-size: 46px;
+    margin-top: 90px;
+}
+
+h2 {
+    font-size: 30px;
+    border-bottom: 3px solid #2996d6;
+    padding-bottom: 12px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.subtitle {
+    color: #718397;
+    font-size: 20px;
+}
+
+.card {
+    background: #eaf5fc;
+    padding: 18px 22px;
+    margin: 18px 0;
+    border-radius: 8px;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button {
+    background: #102b46;
+    color: white;
+    border: none;
+    padding: 11px 25px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #2996d6;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+#pageNumber {
+    margin: 0 15px;
+    color: #718397;
+}
+
+@media(max-width: 600px) {
+    .presentation {
+        width: 94%;
+        padding: 25px;
+        min-height: 550px;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-top: 60px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="presentation">
+
+    <!-- 第 1 頁：封面 -->
+    <section class="slide active">
+        <p style="color:#2996d6;font-weight:bold;">
+            WEATHER KNOWLEDGE
+        </p>
+
+        <h1>認識台灣天氣</h1>
+
+        <p class="subtitle">
+            從雲的形成到颱風，了解日常天氣背後的科學知識。
+        </p>
+
+        <p style="margin-top:40px;color:#718397;">
+            氣象知識入門教學
+        </p>
+    </section>
+
+
+    <!-- 第 2 頁：雲 -->
+    <section class="slide">
+        <h2>一、雲的種類與形成</h2>
+
+        <p>
+            雲是由空氣中的水氣凝結形成的。
+            當地表水分蒸發後，水氣隨著空氣上升，
+            遇冷凝結成微小水滴或冰晶，就形成了雲。
+        </p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="icon">☁️</div>
+                <h3>積雲</h3>
+                <p>外觀蓬鬆，常見於天氣較好的時候。</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌫️</div>
+                <h3>層雲</h3>
+                <p>呈現大片平坦的雲層，有時會帶來陰雨天氣。</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌧️</div>
+                <h3>積雨雲</h3>
+                <p>雲體發展旺盛，可能帶來雷雨及強降雨。</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌤️</div>
+                <h3>卷雲</h3>
+                <p>位於高空，外觀細長，像羽毛一樣。</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 第 3 頁：季風 -->
+    <section class="slide">
+        <h2>二、台灣的季風</h2>
+
+        <p>
+            季風是隨著季節改變風向的盛行風。
+            台灣受到季風影響，因此不同季節的天氣也會有所不同。
+        </p>
+
+        <div class="card">
+            <h3>東北季風</h3>
+            <p>
+                主要影響秋冬季節，北部及東半部較容易出現降雨，
+                中南部則相對乾燥。
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>西南季風</h3>
+            <p>
+                夏季常帶來暖濕空氣，使台灣部分地區容易出現降雨。
+            </p>
+        </div>
+
+        <p>
+            台灣的地形也會影響降雨分布，因此不同地區可能出現不同天氣。
+        </p>
+    </section>
+
+
+    <!-- 第 4 頁：颱風 -->
+    <section class="slide">
+        <h2>三、颱風是什麼？</h2>
+
+        <p>
+            颱風是一種發展於熱帶海洋上的強烈低氣壓系統。
+            當海面提供充足水氣與能量，並具備適合的大氣環境時，
+            熱帶系統就可能逐漸增強。
+        </p>
+
+        <div class="card">
+            <h3>颱風可能帶來的影響</h3>
+            <ul>
+                <li>強風：可能造成建築物或設施損壞。</li>
+                <li>豪雨：可能造成淹水及土石流。</li>
+                <li>巨浪：可能影響海上活動及沿海地區。</li>
+            </ul>
+        </div>
+
+        <p>
+            即使颱風沒有直接登陸台灣，也可能對部分地區造成影響。
+        </p>
+    </section>
+
+
+    <!-- 第 5 頁：豪雨 -->
+    <section class="slide">
+        <h2>四、豪雨與淹水</h2>
+
+        <p>
+            豪雨是短時間或一定期間內出現大量降雨的現象。
+            當雨水超過地面排水系統或河川的負荷時，
+            就可能造成積水或淹水。
+        </p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>短時間強降雨</h3>
+                <p>大量雨水集中降下，排水系統可能來不及處理。</p>
+            </div>
+
+            <div class="card">
+                <h3>地勢低窪</h3>
+                <p>低窪地區容易累積雨水，增加淹水風險。</p>
+            </div>
+
+            <div class="card">
+                <h3>河川水位上升</h3>
+                <p>大量降雨可能使河川水位快速上升。</p>
+            </div>
+
+            <div class="card">
+                <h3>都市排水</h3>
+                <p>排水設施不足或堵塞，也可能造成積水。</p>
+            </div>
+        </div>
+
+        <p>
+            遇到豪雨時，應留意官方發布的警特報，
+            避免前往河川及容易淹水的地區。
+        </p>
+    </section>
+
+
+    <!-- 第 6 頁：氣象雷達 -->
+    <section class="slide">
+        <h2>五、氣象雷達</h2>
+
+        <p>
+            氣象雷達是一種觀測降雨的工具。
+            它會發射電磁波，並接收碰到雨滴後反射回來的訊號，
+            進而分析降雨的位置與強度。
+        </p>
+
+        <div class="card">
+            <h3>氣象雷達可以做什麼？</h3>
+
+            <ul>
+                <li>觀察降雨分布。</li>
+                <li>判斷雨勢強弱。</li>
+                <li>追蹤降雨區域的移動。</li>
+            </ul>
+        </div>
+
+        <p>
+            透過持續觀察雷達資料，
+            可以協助氣象人員掌握降雨的變化。
+        </p>
+    </section>
+
+
+    <!-- 第 7 頁：總結 -->
+    <section class="slide">
+        <h2>六、重點整理</h2>
+
+        <div class="card">
+            <h3>雲</h3>
+            <p>水氣冷卻凝結後形成，不同種類的雲有不同外觀。</p>
+        </div>
+
+        <div class="card">
+            <h3>季風</h3>
+            <p>季節性的風向變化，會影響台灣各地的天氣。</p>
+        </div>
+
+        <div class="card">
+            <h3>颱風與豪雨</h3>
+            <p>可能帶來強風、降雨及相關災害。</p>
+        </div>
+
+        <div class="card">
+            <h3>氣象雷達</h3>
+            <p>透過電磁波回波，協助觀察降雨的位置與變化。</p>
+        </div>
+
+        <h3 style="text-align:center;margin-top:35px;">
+            感謝觀看
+        </h3>
+    </section>
+
+</main>
+
+
+<!-- 簡報控制 -->
+<div class="controls">
+    <button id="prev" onclick="changeSlide(-1)">上一頁</button>
+
+    <span id="pageNumber">1 / 7</span>
+
+    <button id="next" onclick="changeSlide(1)">下一頁</button>
+</div>
+
+
+<script>
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+function showSlide() {
+    slides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === currentSlide);
+    });
+
+    document.getElementById("pageNumber").textContent =
+        `${currentSlide + 1} / ${slides.length}`;
+
+    document.getElementById("prev").disabled =
+        currentSlide === 0;
+
+    document.getElementById("next").disabled =
+        currentSlide === slides.length - 1;
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+
+    if (currentSlide < 0) {
+        currentSlide = 0;
+    }
+
+    if (currentSlide >= slides.length) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide();
+}
+
+// 鍵盤左右鍵切換
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowRight") {
+        changeSlide(1);
+    }
+
+    if (event.key === "ArrowLeft") {
+        changeSlide(-1);
+    }
+});
+
+showSlide();
+</script>
+
+</body>
+</html>
